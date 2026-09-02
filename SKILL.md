@@ -1,9 +1,9 @@
 ---
-name: claude-md-slim
+name: project-md-slim
 description: CLAUDE.md가 무거울 때 "항상 적용되는 핵심 규칙"만 남기고 상세 내용을 작업유형별 참조 문서(docs/guide/ 등)로 분할한다. 모드 - (없음) 전체 분할(승인 후 실행) / check 진단만. "CLAUDE.md 정리", "CLAUDE.md 다이어트", "지침 분할", "컨텍스트 줄이기" 요청 시 사용.
 ---
 
-# claude-md-slim — CLAUDE.md 경량화·분할
+# project-md-slim — CLAUDE.md 경량화·분할
 
 CLAUDE.md는 **모든 세션이 시작할 때 전부 로드**된다. 여기에 DB 상세, 배포 절차, UI 가이드까지 다 들어 있으면
 매 대화가 그 무게를 짊어진다 — 정작 그 세션에서 안 쓰는 내용인데도.
@@ -15,8 +15,8 @@ CLAUDE.md는 **모든 세션이 시작할 때 전부 로드**된다. 여기에 D
 
 | 호출 | 동작 | 파일 변경 |
 | --- | --- | --- |
-| `/claude-md-slim` | 진단 → 분할 계획표 제시 → **승인 후에만** 분할 실행 | 승인 후에만 |
-| `/claude-md-slim check` | 진단만: 섹션별 분류표와 예상 절감량 보고 | 없음 |
+| `/project-md-slim` | 진단 → 분할 계획표 제시 → **승인 후에만** 분할 실행 | 승인 후에만 |
+| `/project-md-slim check` | 진단만: 섹션별 분류표와 예상 절감량 보고 | 없음 |
 
 ## 분류 기준
 
@@ -30,7 +30,7 @@ CLAUDE.md는 **모든 세션이 시작할 때 전부 로드**된다. 여기에 D
 | **뺀다** | 특정 작업 유형에서만 필요한 상세 | DB·SQL 작성법, 배포 절차, UI 컴포넌트 가이드, 도메인 비즈니스 룰, 외부연동 절차, 긴 코드 예시 |
 
 분리 단위는 **작업 유형별 1파일**: `guide-db.md`, `guide-deploy.md`, `guide-ui.md`, `guide-domain.md`, `guide-feature.md` 식.
-위치는 프로젝트 문서 폴더(권장: `docs/guide/` — workspace-setup 스킬의 3분할 구조와 맞물림. 없으면 사용자와 합의).
+위치는 프로젝트 문서 폴더(권장: `docs/guide/` — project-workspace-setup 스킬의 3분할 구조와 맞물림. 없으면 사용자와 합의).
 
 ## 안전 원칙 (절차보다 우선한다)
 
@@ -81,5 +81,5 @@ CLAUDE.md 안의 `@docs/guide/guide-db.md` 같은 **@ 경로 표기는 Claude Co
 
 ## 관련 스킬
 
-- **workspace-setup** — 저장소 3분할 구조(dev/docs/works) 셋팅. 분리된 가이드가 들어갈 `docs/guide/`를 만들어준다.
-  https://github.com/seamoon23/workspace-setup
+- **project-workspace-setup** — 저장소 3분할 구조(dev/docs/works) 셋팅. 분리된 가이드가 들어갈 `docs/guide/`를 만들어준다.
+  https://github.com/seamoon23/project-workspace-setup

@@ -1,4 +1,4 @@
-# claude-md-slim
+# project-md-slim
 
 Claude Code용 CLAUDE.md 경량화 스킬. 무거워진 CLAUDE.md에서 **"항상 적용되는 핵심 규칙"만 남기고**, 상세 내용은 작업유형별 참조 문서(`docs/guide/guide-*.md`)로 분할합니다.
 
@@ -20,23 +20,23 @@ Claude Code가 설치되어 있어야 합니다.
 **Windows (PowerShell)**
 
 ```powershell
-git clone https://github.com/seamoon23/claude-md-slim.git "$env:USERPROFILE\.claude\skills\claude-md-slim"
+git clone https://github.com/seamoon23/project-md-slim.git "$env:USERPROFILE\.claude\skills\project-md-slim"
 ```
 
 **macOS / Linux**
 
 ```bash
-git clone https://github.com/seamoon23/claude-md-slim.git ~/.claude/skills/claude-md-slim
+git clone https://github.com/seamoon23/project-md-slim.git ~/.claude/skills/project-md-slim
 ```
 
-팀 공유는 프로젝트 저장소의 `.claude/skills/claude-md-slim/`에 파일을 복사해 커밋하면 됩니다. 업데이트는 설치 폴더에서 `git pull`.
+팀 공유는 프로젝트 저장소의 `.claude/skills/project-md-slim/`에 파일을 복사해 커밋하면 됩니다. 업데이트는 설치 폴더에서 `git pull`.
 
 ## 사용법
 
 | 명령 | 동작 | 파일 변경 |
 | --- | --- | --- |
-| `/claude-md-slim check` | 진단만: 섹션별 남김/이동 분류표 + 예상 절감량 보고. 처음이면 이것부터 | 없음 |
-| `/claude-md-slim` | 진단 → 분할 계획표 제시 → **승인 후에만** 분할 실행 | 승인 후에만 |
+| `/project-md-slim check` | 진단만: 섹션별 남김/이동 분류표 + 예상 절감량 보고. 처음이면 이것부터 | 없음 |
+| `/project-md-slim` | 진단 → 분할 계획표 제시 → **승인 후에만** 분할 실행 | 승인 후에만 |
 
 ## 안전 원칙
 
@@ -48,7 +48,7 @@ git clone https://github.com/seamoon23/claude-md-slim.git ~/.claude/skills/claud
 
 ## 관련 스킬
 
-- [workspace-setup](https://github.com/seamoon23/workspace-setup) — 저장소 3분할 구조(dev/docs/works) 셋팅. 분리된 가이드가 들어갈 `docs/guide/`를 만들어주는 자매 스킬.
+- [project-workspace-setup](https://github.com/seamoon23/project-workspace-setup) — 저장소 3분할 구조(dev/docs/works) 셋팅. 분리된 가이드가 들어갈 `docs/guide/`를 만들어주는 자매 스킬.
 
 ## License
 

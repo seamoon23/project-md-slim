@@ -46,9 +46,10 @@ git clone https://github.com/seamoon23/project-md-slim.git ~/.claude/skills/proj
 4. **복구 경로 확보** — git 커밋 상태에서 시작 (git이 없으면 백업 사본 생성 후 진행)
 5. **검증 보고** — 전/후 줄 수, 이동 섹션 목록, 원문 대비 유실 대조를 보고에 포함
 
-## 관련 스킬
+## 관련 스킬 (project-* 세트)
 
 - [project-workspace-setup](https://github.com/seamoon23/project-workspace-setup) — 저장소 3분할 구조(dev/docs/works) 셋팅. 분리된 가이드가 들어갈 `docs/guide/`를 만들어주는 자매 스킬.
+- [project-artifacts](https://github.com/seamoon23/project-artifacts) — SI 표준 산출물(테이블·컬럼·코드정의서, 프로그램설명서, ERD) 생성/갱신 스킬.
 
 ## License
 

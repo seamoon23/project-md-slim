@@ -1,6 +1,6 @@
 ---
 name: project-md-slim
-description: CLAUDE.md가 무거울 때 "항상 적용되는 핵심 규칙"만 남기고 상세 내용을 작업유형별 참조 문서(docs/guide/ 등)로 분할한다. 모드 - (없음) 전체 분할(승인 후 실행) / check 진단만. "CLAUDE.md 정리", "CLAUDE.md 다이어트", "지침 분할", "컨텍스트 줄이기" 요청 시 사용.
+description: CLAUDE.md(또는 PROJECT.md)가 무거울 때 "항상 적용되는 핵심 규칙"만 남기고 상세 내용을 작업유형별 참조 문서(docs/guide/ 등)로 분할한다. 모드 - (없음) 전체 분할(승인 후 실행) / check 진단만. "CLAUDE.md 정리", "CLAUDE.md 다이어트", "지침 분할", "컨텍스트 줄이기" 요청 시 사용.
 ---
 
 # project-md-slim — CLAUDE.md 경량화·분할
@@ -79,7 +79,23 @@ CLAUDE.md 안의 `@docs/guide/guide-db.md` 같은 **@ 경로 표기는 Claude Co
 - **필요할 때만 읽게 하려면**: 일반 경로(`docs/guide/guide-db.md`)로 쓰거나 백틱 코드 스팬으로 감싼다 (코드 스팬 안의 @는 임포트되지 않음).
 - **항상 로드가 맞는 파일만** @를 쓴다 (예: 세션 인수인계 메모).
 
+## PROJECT.md 구조를 쓰는 프로젝트라면
+
+`project-workspace-setup`으로 셋팅한 저장소는 지침이 3계층으로 나뉘어 있다.
+이때 **분할 대상은 `PROJECT.md`이고, `CLAUDE.md`는 건드리지 않는다.**
+
+| 파일 | 로드 | 이 스킬의 처리 |
+| --- | --- | --- |
+| `CLAUDE.md` | 항상 | **대상 아님** — 이전 작업자의 문서. 최상단 `@PROJECT.md` 진입 블록도 그대로 둔다 |
+| `PROJECT.md` | 항상 | **분할 대상** — 여기서 상세를 빼고 참조 표를 남긴다 |
+| `docs/guide/*.md` | 필요시만 | 분할 산출물 |
+
+- 분할 후에도 `CLAUDE.md`의 `@PROJECT.md`는 **반드시 유지**한다. 이걸 지우거나 백틱으로 감싸면 절대 규칙이 매 세션 로드되지 않는다.
+- `PROJECT.md`의 "환경" 표와 "절대 규칙" 절은 **이동 금지 코어**다 (위 분류 기준 참조).
+- 어느 파일을 분할할지 애매하면 사용자에게 묻는다. CLAUDE.md에 우리 규칙이 섞여 있는 오래된 프로젝트라면
+  **강제로 옮기지 말고** 현 상태를 보고한 뒤 사용자 결정을 따른다.
+
 ## 관련 스킬
 
-- **project-workspace-setup** — 저장소 3분할 구조(dev/docs/works) 셋팅. 분리된 가이드가 들어갈 `docs/guide/`를 만들어준다.
+- **project-workspace-setup** — 저장소 3분할 구조(dev/docs/works) 셋팅 + `PROJECT.md` 생성. 분리된 가이드가 들어갈 `docs/guide/`를 만들어준다.
   https://github.com/seamoon23/project-workspace-setup

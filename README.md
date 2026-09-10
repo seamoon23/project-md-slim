@@ -71,6 +71,7 @@ git clone https://github.com/seamoon23/project-md-slim.git ~/.claude/skills/proj
 - [project-workspace-setup](https://github.com/seamoon23/project-workspace-setup) — 저장소 3분할 구조(dev/docs/works) 셋팅 + `PROJECT.md` 생성. 분리된 가이드가 들어갈 `docs/guide/`를 만들어주는 자매 스킬.
 - [project-artifacts](https://github.com/seamoon23/project-artifacts) — SI 표준 산출물(테이블·컬럼·코드정의서, 프로그램설명서, ERD) 생성/갱신 스킬.
 - [project-dev-tomcat](https://github.com/seamoon23/project-dev-tomcat) — 프로젝트별 로컬 Tomcat 인스턴스를 만들고(포트 자동 분리) 빌드·배포·기동·로그를 `tc` 한 명령으로 관리. Windows 전용.
+- [project-stack-guide](https://github.com/seamoon23/project-stack-guide) — 코드·설정을 스캔해 적용 기술 명세와 학습 가이드를 탭형 HTML 한 장으로 생성. 같은 `docs/guide/`를 쓰지만 파일명이 겹치지 않고(`guide-*.md` ↔ `stack-guide.html`), **독자가 AI가 아니라 사람**이라는 점이 이 스킬과 다르다.
 
 ## License
 
